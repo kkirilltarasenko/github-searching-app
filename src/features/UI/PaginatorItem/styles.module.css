@@ -1,0 +1,22 @@
+.paginator__item {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #747bff;
+    border-radius: 3px;
+    color: white;
+
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.paginator__item__clicked {
+    background-color: #1d23a7;
+}
+
+.paginator__item:hover {
+    background-color: #1d23a7;
+}

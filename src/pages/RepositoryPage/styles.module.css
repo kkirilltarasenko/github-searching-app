@@ -1,0 +1,144 @@
+.repository__box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.repository {
+    width: 100%;
+    max-width: 700px;
+    height: 300px;
+    border: 2px solid cornflowerblue;
+    border-radius: 15px;
+
+    -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+}
+
+.repository__header {
+    width: 100%;
+    padding: 20px;
+    height: 80px;
+    background-color: cornflowerblue;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.repository__headerBox {
+    width: 50%;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.repository__headerNameBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.repository__name {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.repository__stars {
+    display: block;
+    margin-left: 20px;
+    font-size: 15px;
+    background-color: #ffd911;
+    color: #0e0e0e;
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+
+.repository__commit {
+    text-transform: uppercase;
+    color: white;
+}
+
+.repository__commitDate {
+    color: #213547;
+}
+
+.repository__owner {
+    width: 50%;
+    max-width: 270px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.repository__ownerLogin {
+    color: #213547;
+    margin-bottom: 5px;
+}
+
+.repository__ownerUrl {
+    color: white;
+    font-size: 13px;
+
+    transition: color .3s ease;
+}
+
+.repository__ownerUrl:hover {
+    color: #213547;
+}
+
+.repository__ownerAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid cornflowerblue;
+    margin-right: 10px;
+}
+
+.repository__footer {
+    padding: 0 20px;
+}
+
+.repository__footerTitle {
+    margin: 10px 0 10px 5px;
+    color: #213547;
+}
+
+.repository__tags {
+    margin: 15px 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.repository__description {
+    margin-left: 5px;
+}
+
+
+@media screen and (max-width: 484px) {
+    .repository__commit {
+        font-size: 15px;
+    }
+
+    .repository__owner {
+        max-width: 170px;
+    }
+
+    .repository__ownerUrl {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .repository {
+        height: 350px;
+    }
+}
