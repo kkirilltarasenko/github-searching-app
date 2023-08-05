@@ -32,6 +32,8 @@ export const fetchReps = createAsyncThunk(
       },
       body: JSON.stringify({ query: query }),
     });
+    const data = await response.json();
+    console.log(data);
     return await response.json();
   }
 )
