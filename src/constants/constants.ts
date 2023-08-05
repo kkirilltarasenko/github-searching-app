@@ -1,5 +1,5 @@
 // Data for requests
-export const GITHUB_TOKEN: string = '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';
+export const GITHUB_TOKEN: string = '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';
 export const BASE_URL: string = 'https://api.github.com/graphql';
 
 // Local storage keys
