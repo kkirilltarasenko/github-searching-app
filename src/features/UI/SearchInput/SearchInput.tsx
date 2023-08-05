@@ -8,7 +8,7 @@ interface SearchInputProps {
 }
 
 const SearchInput = React.memo(({ placeholder }: SearchInputProps) => {
-  const query: string = useAppSelector(state => state.query.query);
+  const query: string | null = useAppSelector(state => state.query.query);
   const dispatch = useAppDispatch();
 
   const handleQuery = (e: ChangeEvent<HTMLInputElement>) => {

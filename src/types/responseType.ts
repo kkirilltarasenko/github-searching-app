@@ -5,7 +5,7 @@ export type ResponseType = {
     search?: {
       edges: Array<RepositoryType>,
     },
-    viewer?: {
+    viewer: {
       repositories: {
         edges: Array<RepositoryType>,
       }

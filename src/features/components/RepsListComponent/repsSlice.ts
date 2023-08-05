@@ -5,7 +5,7 @@ import { BASE_URL, GITHUB_TOKEN, currentRepository } from 'src/constants/constan
 
 interface SliceState {
   repositories: Array<RepositoryType>,
-  selectedRepository: RepositoryDetailsType,
+  selectedRepository: string | null,
   cursor: {
     first: string,
     last: string,
@@ -14,7 +14,7 @@ interface SliceState {
 
 const state: SliceState = {
   repositories: [],
-  selectedRepository: JSON.parse(localStorage.getItem(currentRepository)),
+  selectedRepository: localStorage.getItem(currentRepository),
   cursor: {
     first: '',
     last: '',
@@ -41,14 +41,13 @@ const repsSlice = createSlice({
   initialState: state,
   reducers: {
     selectRepository: (state, action: PayloadAction<RepositoryDetailsType>) => {
-      state.selectedRepository = action.payload;
-      localStorage.setItem(currentRepository, JSON.stringify(state.selectedRepository));
+      state.selectedRepository = JSON.stringify(action.payload);
+      localStorage.setItem(currentRepository, state.selectedRepository);
     }
   },
   extraReducers: builder => {
     builder.addCase(fetchReps.fulfilled, (state, action: PayloadAction<ResponseType>) => {
       let repositories;
-      console.log(action.payload);
       if (action.payload.data.search) {
         repositories = action.payload.data.search.edges;
       } else {

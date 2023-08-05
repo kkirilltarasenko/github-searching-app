@@ -28,7 +28,7 @@ const paginatorSlice = createSlice({
         if (el.id === action.payload.id) {
           el.isClicked = true;
           state.prev = state.current;
-          state.current = el.value;
+          state.current = Number(el.value);
         } else {
           el.isClicked = false;
         }

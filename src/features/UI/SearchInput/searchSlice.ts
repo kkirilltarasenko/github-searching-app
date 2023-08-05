@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { queryKey } from 'src/constants/constants';
 
 interface SliceState {
-  query: string,
+  query: string | null,
 }
 
 const initialState: SliceState = {

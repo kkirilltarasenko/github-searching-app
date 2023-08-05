@@ -1,12 +1,12 @@
 export function generateQuery(
-  query: string,
-  page?: number,
-  prevPage?: number,
+  query: string | null,
+  page: number,
+  prevPage: number,
   cursor?: { first: string, last: string }
 ): string {
   let params = ', first: 10';
 
-  if (page !== 1 && page) {
+  if (page !== 1) {
     params = `, first: 10, after: "${cursor?.last}"`;
   }
   if (prevPage > page) {

@@ -10,7 +10,7 @@ import { nullSearchQuery } from 'src/utils/nullSearchQuery';
 import styles from './styles.module.css';
 
 const MainPage = () => {
-  const query: string = useAppSelector(state => state.query.query);
+  const query: string | null = useAppSelector(state => state.query.query);
   const page: number = useAppSelector(state => state.paginator.current);
   const prevPage: number = useAppSelector(state => state.paginator.prev);
   const cursor: { first: string, last: string } = useAppSelector(state => state.repositories.cursor);
@@ -18,7 +18,7 @@ const MainPage = () => {
 
   const memoQuery: string = useMemo(() => {
     return generateQuery(query, page, prevPage, cursor);
-  }, [query, page, prevPage, cursor]);
+  }, [query, page]);
 
   const debouncedSearch = useDebounce(query ? memoQuery : nullSearchQuery(), 500);
   useEffect(() => {

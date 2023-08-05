@@ -1,14 +1,13 @@
 import { useMemo } from 'react';
 import { useAppSelector } from 'src/hooks/hooks';
-import { RepositoryDetailsType } from 'src/types/repositoryType';
 import { parseRepository } from 'src/utils/parseRepository';
 import Tag from 'src/features/UI/Tag/Tag';
 import styles from './styles.module.css';
 
 const RepositoryPage = () => {
-  const repository: RepositoryDetailsType = useAppSelector(state => state.repositories.selectedRepository);
+  const repository: string | null = useAppSelector(state => state.repositories.selectedRepository);
   const { description, name, stargazerCount, lastCommitDate, owner, languages } = useMemo(() => {
-    return parseRepository(repository);
+    return parseRepository(repository ? JSON.parse(repository) : '');
   }, [repository]);
 
   return (
