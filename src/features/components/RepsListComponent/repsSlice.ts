@@ -27,7 +27,7 @@ export const fetchReps = createAsyncThunk(
     const response = await fetch(BASE_URL, {
       method: 'POST',
       headers: {
-        'Authorization': `bearer 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`,
+        'Authorization': `bearer ${GITHUB_TOKEN}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ query: query }),
