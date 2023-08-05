@@ -48,6 +48,7 @@ const repsSlice = createSlice({
   extraReducers: builder => {
     builder.addCase(fetchReps.fulfilled, (state, action: PayloadAction<ResponseType>) => {
       let repositories;
+      console.log(action.payload);
       if (action.payload.data.search) {
         repositories = action.payload.data.search.edges;
       } else {
