@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, FC } from 'react';
 import { useAppDispatch } from 'src/hooks/hooks';
 import { Link } from 'react-router-dom';
 import { selectRepository } from 'src/features/components/RepsListComponent/repsSlice';
@@ -6,7 +6,7 @@ import { RepositoryDetailsType } from 'src/types/repositoryType';
 import { parseRepository } from 'src/utils/parseRepository';
 import styles from './styles.module.css';
 
-const RepItemComponent = React.memo((repository : RepositoryDetailsType) => {
+const RepItemComponent: FC<RepositoryDetailsType> = React.memo((repository) => {
   const { description, id, name, url, stargazerCount, lastCommitDate } = useMemo(() => {
     return parseRepository(repository);
   }, [repository]);
