@@ -1,5 +1,5 @@
 import { useAppSelector } from 'src/hooks/hooks';
-import { PaginatorItemType } from 'src/types/paginatorItemType';
+import type { PaginatorItemType } from 'src/types/paginatorItemType';
 import PaginatorItem from 'src/features/UI/PaginatorItem/PaginatorItem';
 import styles from './styles.module.css';
 
