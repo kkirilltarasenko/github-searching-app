@@ -1,5 +1,5 @@
 import { useAppSelector } from 'src/hooks/hooks';
-import { RepositoryType } from 'src/types/repositoryType';
+import type { RepositoryType } from 'src/types/repositoryType';
 import RepItemComponent from 'src/features/components/RepItemComponent/RepItemComponent';
 import styles from './styles.module.css';
 
