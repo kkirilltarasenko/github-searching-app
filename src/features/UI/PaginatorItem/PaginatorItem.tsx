@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useAppDispatch } from 'src/hooks/hooks';
 import { setActiveItem } from 'src/features/UI/Paginator/paginatorSlice';
-import { PaginatorItemType } from 'src/types/paginatorItemType';
+import type { PaginatorItemType } from 'src/types/paginatorItemType';
 import styles from './styles.module.css';
 
 interface PaginatorItemProps {
