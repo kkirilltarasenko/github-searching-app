@@ -2,7 +2,7 @@ import React, { useMemo, FC } from 'react';
 import { useAppDispatch } from 'src/hooks/hooks';
 import { Link } from 'react-router-dom';
 import { selectRepository } from 'src/features/components/RepsListComponent/repsSlice';
-import { RepositoryDetailsType } from 'src/types/repositoryType';
+import type { RepositoryDetailsType } from 'src/types/repositoryType';
 import { parseRepository } from 'src/utils/parseRepository';
 import styles from './styles.module.css';
 
